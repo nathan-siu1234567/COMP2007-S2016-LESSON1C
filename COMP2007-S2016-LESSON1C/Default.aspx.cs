@@ -16,7 +16,7 @@ namespace COMP2007_S2016_LESSON1C
 
         protected void SubmitButton_Click(object sender, EventArgs e)
         {
-            FullNameBox.Text = FirstNameTextBox.Text + TextBox1.Text;
+            FullNameBox.Text = FirstNameTextBox.Text +" "+TextBox1.Text;
         }
        
 

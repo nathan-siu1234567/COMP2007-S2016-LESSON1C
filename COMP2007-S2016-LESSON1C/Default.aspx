@@ -50,17 +50,18 @@
                 <form id="form1" runat="server">
                     <div class="form-group">
                         <asp:Label ID="FirstNameLabel" Text="First Name" runat="server" />
-                        <asp:TextBox CssClass="form-control" ID="FirstNameTextBox" runat="server" />
+                        <asp:TextBox CssClass="form-control" ID="FirstNameTextBox" runat="server" CausesValidation="True" />
                     </div>
 
                      <div class="form-group">
                         <asp:Label ID="LastNameLabel" Text="Last name" runat="server" />
-                        <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" />
+                        <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" CausesValidation="True" />
                     </div>
 
                      <div class="form-group">
                         <asp:Label ID="AgeLabel" Text="Age" runat="server" />
                         <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" />
+                         <asp:RangeValidator ID="AgeRangeValidator" runat="server" ErrorMessage="Please enter a value between 1 and 130" ControlToValidate="TextBox2" ForeColor="Red" MaximumValue="130" MinimumValue="1" Type="Integer"></asp:RangeValidator>
                     </div>
 
                     <asp:Button CssClass="btn btn-primary" ID="SubmitButton" runat="server" Text="Submit" OnClick="SubmitButton_Click"/>
